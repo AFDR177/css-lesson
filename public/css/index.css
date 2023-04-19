@@ -1,7 +1,69 @@
-html {
-  max-width: 720px;
+/* .card {
+  color: red;
+} */
+
+.card > p {
+  color: green;
+  -webkit-text-fill-color: red;
+  -webkit-text-stroke: 1px blue;
+}
+p:focus,
+p:active,
+p:hover {
+  -webkit-text-fill-color: rgb(217, 255, 0);
+  -webkit-text-stroke: 0.5px blue;
+  direction: rtl;
+}
+#test {
+  color: unset;
+  -webkit-text-fill-color: unset;
+  -webkit-text-stroke: unset;
+  text-align: center;
+  letter-spacing: 0.3em;
+  letter-spacing: 10px;
+}
+pre {
+  tab-size: 4;
+}
+span {
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: underline dotted red;
+}
+span:hover {
+  text-decoration-color: blue;
+  text-decoration-line: line-through;
+  text-decoration-style: wavy;
+}
+* {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-display: swap;
+}
+span {
+  font-size: large;
+  font-weight: 900;
+
+  font-style: italic;
 }
 
-body {
-  background: #fff;
+/* ========= Словник ======  */
+
+#slovnik p {
+  color: red;
+  text-rendering: optimizeSpeed;
+}
+
+/* ========= УРОК 5 ======== */
+
+.span-b {
+  display: none;
+}
+.block {
+  display: block;
+  background: rgb(201, 198, 198);
+  margin: auto;
+  width: 100%;
+  max-width: 600px;
+  padding: 15px;
 }

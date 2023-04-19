@@ -1,0 +1,183 @@
+/* :root {
+  background: purple;
+}
+
+html {
+  max-width: 720px;
+  background: blue;
+}
+
+body {
+  background: #fff;
+}
+* {
+  color: red;
+}
+
+h1 {
+  color: green;
+}
+
+.box {
+  background: #f0eded;
+}
+#user,
+.user {
+  color: blue;
+}
+
+h1,
+h2#user,
+button.button#button {
+  color: green;
+}
+#box > p {
+  color: aquamarine;
+}
+
+footer > .user {
+  color: blanchedalmond;
+}
+
+section em {
+  color: blueviolet;
+}
+
+h1 + p {
+  background: black;
+} */
+
+/* ========== Селектори. Урок 2 ================== */
+/* .card-dark {
+  background: rgb(241, 237, 237);
+}
+.item {
+  color: green;
+}
+.item:last-of-type {
+  color: blue;
+}
+
+.item:nth-child(3n) {
+  color: yellow;
+}
+p:not(.item) {
+  color: blueviolet;
+}
+p:empty {
+  height: 1px;
+  background: coral;
+} */
+/* ========== Селектори. Урок 3 ================== */
+.card-dark {
+  background: rgb(241, 237, 237);
+}
+.input-dark {
+  background: rgb(202, 196, 196);
+}
+.input-dark[required] {
+  background: rgb(225, 10, 10);
+}
+.input-dark[type='number'] {
+  background: rgb(9, 192, 97);
+}
+.small-img[alt~='100px'] {
+  height: 200px;
+}
+a[rel~='external'] {
+  color: green;
+}
+button[class|='btn'] {
+  background: rgb(107, 105, 105);
+}
+a[class*='btn'] {
+  background: rgb(202, 11, 11);
+}
+a[class$='big'] {
+  background: rgb(11, 94, 202);
+}
+.btn::first-letter {
+  color: red;
+}
+.big-text::first-line {
+  color: red;
+}
+.input-dark::placeholder {
+  color: green;
+}
+.big-text::before,
+.big-text::after {
+  content: '$$$';
+  color: green;
+}
+/* ========== Селектори. Урок 4 ================== */
+
+#test:target {
+  color: red;
+}
+.link:link {
+  color: red;
+}
+.link:hover {
+  color: green;
+}
+.card:hover {
+  background: rgb(165, 224, 165);
+}
+.link:active {
+  color: purple;
+}
+.card:active {
+  background-color: rgb(225, 169, 225);
+}
+input {
+  background-color: gray;
+}
+input:focus {
+  background-color: rgb(239, 161, 161);
+}
+.card:focus-within {
+  background-color: red;
+}
+.card:lang(en) > span::after {
+  content: ' (en)';
+}
+button {
+  background: greenyellow;
+}
+button:enabled {
+  background: rgb(84, 136, 5);
+}
+button:disabled {
+  background-color: aqua;
+}
+.inp:read-write {
+  background-color: blue;
+}
+.inp:read-only {
+  background-color: rgb(253, 74, 3);
+}
+input[type='checkbox']:checked ~ span {
+  background-color: red;
+}
+.valid:valid {
+  background-color: yellow;
+}
+.valid:invalid {
+  background-color: goldenrod;
+}
+.valid:optional {
+  background-color: green;
+}
+.number:focus {
+  background-color: gray;
+}
+.number:out-of-range {
+  background-color: red;
+}
+.number:in-range {
+  background-color: green;
+}
+input:placeholder-shown ~ span {
+  background-color: rgb(244, 164, 244);
+}
