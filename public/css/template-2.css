@@ -379,7 +379,7 @@ h1 {
   /* flex-basis: calc(50% - 24px); */
 }
 .flex-item:nth-of-type(2) {
-  background-color: blue;
+  background-color: purple;
 }
 .flex-item:nth-of-type(3) {
   /* flex-grow: 2; */
