@@ -204,7 +204,7 @@ body {
 .hero_text {
   color: var(--color-text);
   font-size: var(--size-l);
-  font-weight: var(--weight-text)
+  font-weight: var(--weight-text);
   line-height: 150%;
 }
 .blog {
@@ -242,11 +242,10 @@ body {
   font-size: var(--size-d);
   text-decoration: none;
   padding: var(--space-m) var(--space-xm);
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius)
 
   transition: opacity 1s, background-color 1s;
   
-
 }
 .card_button {
   color: var(--color-white);
@@ -290,9 +289,9 @@ body {
 }
 .form_button {
   background-color: var(--color-white);
-width: 100%;
-max-width: 160px;
-color: var(--color-text);
+  width: 100%;
+  max-width: 160px;
+  color: var(--color-text);
 }
 
 .hero_slider_icon {
