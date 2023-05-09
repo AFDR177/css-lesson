@@ -37,7 +37,6 @@ body {
 
   display: flex;
   flex-direction: column;
-
   gap: 80px;
 }
 /* ================================================= */
@@ -85,23 +84,6 @@ body {
   text-decoration: underline;
   color: var(--color-primary);
 }
-/* .nav_vertical > .nav_link {
-  display: block;
-} */
-
-/* .nav_inLine > .nav_link:not(:last-child) {
-  все ссылки кроме последней будут иметь  отступ 24пкс
-  margin-right: 24px;
-} */
-
-/* .nav_vertical > .nav_link:not(:last-child) {
-  все ссылки кроме последней будут иметь  отступ 24пкс
-  margin-bottom: 12px;
-} */
-/* .header_nav_right {
-  margin-left: auto;
-  width: fit-content;
-} */
 
 .footer {
   padding: var(--space-l) 0;
@@ -124,63 +106,39 @@ body {
   font-weight: var(--weight-title);
 }
 
-.hero {
+/* WorkHome - template-4 */
+
+.main {
   display: flex;
   align-items: center;
   gap: var(--space-b);
   padding: var(--space-b);
-  border-bottom: 1px solid var(--color-border);
+  /* border-bottom: 1px solid var(--color-border); */
 }
-.hero_image {
+.main_image {
   width: 500px;
   height: 500px;
   border-radius: var(--border-radius);
 }
-.hero_content {
+
+.main_content {
   display: flex;
   flex-direction: column;
   gap: var(--space-l);
 }
-.hero_title {
-  font-size: 50px;
+
+.main_title {
+  font-size: 36px;
   color: var(--color-title);
   font-weight: var(--weight-title);
   line-height: 120%;
 }
-.hero_text {
-  color: var(--color-text);
-  font-size: var(--size-l);
-  font-weight: var(--weight-text);
-  line-height: 150%;
-}
-.blog {
-  display: flex;
-  gap: var(--space-b);
 
-  padding: var(--space-b);
-  border-bottom: 1px solid var(--color-border);
-}
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: var(--space-l);
-}
-.card_image {
-  height: 140px;
-  width: 140px;
-  border-radius: 50%;
-}
-.card_title {
-  font-size: 32px;
-  font-weight: var(--weight-title);
-  color: var(--color-title);
-}
-.card_text {
+.main_description {
+  color: var(--color-text);
   font-size: var(--size-d);
   font-weight: var(--weight-text);
-  color: var(--color-text);
+  line-height: 150%;
 }
 
 .button {
@@ -190,48 +148,88 @@ body {
   padding: var(--space-m) var(--space-xm);
   border-radius: var(--border-radius);
 }
-.card_button {
+
+.main_button {
   color: var(--color-white);
   background-color: var(--color-primary);
-
-  /* display: inline-block;
+  display: inline-block;
   padding: var(--space-m) var(--space-xm);
   font-size: var(--size-d);
-  text-decoration: none; */
-  border-radius: var(--border-radius);
+  text-decoration: none;
+  width: 100%;
+  max-width: 120px;
 }
 .button:hover {
   opacity: 0.7;
 }
-.form {
+
+.featured {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-b);
+  padding: var(--space-b);
+  border-bottom: 1px solid var(--color-border);
+}
+.card_featured {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  text-align: start;
+  gap: var(--space-l);
+
+  gap: var(--space-l);
+  width: calc(100% / 3);
+}
+
+.card_image {
+  height: 64px;
+  width: 64px;
+  border-radius: var(--border-radius);
+}
+.card_title {
+  font-size: 32px;
+  font-weight: var(--weight-title);
+  color: var(--color-title);
+  line-height: 120%;
+}
+.card_text {
+  font-size: var(--size-d);
+  font-weight: var(--weight-text);
+  color: var(--color-text);
+  line-height: 150%;
+}
+
+.actions {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  background: var(--color-primary);
+  background: #563d7c;
   padding: var(--space-l);
 
   border-radius: var(--border-radius);
 }
-.form_content {
+
+.actoins_form {
   display: flex;
   flex-direction: column;
   gap: var(--space-m);
 }
-.form_title {
-  font-size: 27px;
+
+.actions_title {
+  font-size: var(--size-l);
   font-weight: var(--weight-title);
   color: var(--color-white);
-  background-color: var();
 }
-.form_info {
-  font-size: var(--size-d);
-  font-weight: var(--weight-text);
-  color: var(--color-white);
-}
-.form_button {
+
+.actions_button {
   background-color: var(--color-white);
   width: 100%;
-  max-width: 160px;
+  width: 240px;
+  height: 50px;
   color: var(--color-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: calc(var(--border-radius) / 3);
 }
