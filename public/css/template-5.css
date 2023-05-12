@@ -44,8 +44,6 @@ body {
   flex-direction: column;
 
   gap: 80px;
-
-  padding-top: 74px;
 }
 /* ================================================= */
 
@@ -56,15 +54,13 @@ body {
   display: flex;
   justify-content: space-between;
 
-  position: sticky;
-
   max-width: var(--page-width);
   width: 100%;
 
-  top: 0px;
   /* left: calc(50% - var(--page-width) / 2); */
   background-color: var(--color-white);
-
+  position: sticky;
+  top: 0px;
   z-index: 1;
 }
 .logo {
