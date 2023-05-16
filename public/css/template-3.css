@@ -1,3 +1,28 @@
+@import '/css/var.css';
+
+
+@font-face {
+  font-family: "Segment";
+  src: url('/font/Segment-Regular.otf');
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Segment";
+  src: url('/font/Segment-SemiBold.otf');
+  font-weight: 600;
+}
+
+
+
+
+@layer normalize, main, component, style;
+
+@layer style {
+  .card_button {
+    background: red;
+  }
+}
+
 @keyframes fly {
   from {
     top: 0;
@@ -32,29 +57,7 @@
 }
 
 
-:root {
-  --space-m: 12px;
-  --space-xm: 16px;
-  --space-l: 24px;
-  --space-b: 36px;
 
-  --size-s: 14px;
-  --size-d: 16px;
-  --size-l: 20px;
-
-  --color-border: #e6e1de;
-  --color-primary: rgb(45, 45, 231);
-  --color-white: #fff;
-  --color-title: #212529;
-  --color-text: #343a40;
-
-  --border-radius: 12px;
-
-  --weight-title: 500;
-  --weight-text: 400;
-
-  --page-width: 960px;
-}
 
 /* ========================= */
 body {
@@ -237,19 +240,30 @@ body {
   color: var(--color-text);
 }
 
-.button {
-  display: inline-block;
-  font-size: var(--size-d);
-  text-decoration: none;
-  padding: var(--space-m) var(--space-xm);
-  border-radius: var(--border-radius)
-
-  transition: opacity 1s, background-color 1s;
+@layer main {
+  .button {
+    display: inline-block;
+    font-size: var(--size-d);
+    text-decoration: none;
+    padding: var(--space-m) var(--space-xm);
+    border-radius: var(--border-radius)
   
+    transition-property: opacity, background-color;
+    transition-duration: 1s;
+    
+    
+  }
+  .button:hover {
+    opacity: 0.5;
+    background-color: yellow;
+  }
 }
-.card_button {
-  color: var(--color-white);
-  background-color: var(--color-primary);
+
+@layer component {
+  .card_button {
+    color: var(--color-white);
+    background-color: var(--color-primary);
+}
 
   /* display: inline-block;
   padding: var(--space-m) var(--space-xm);
@@ -257,10 +271,7 @@ body {
   text-decoration: none; */
   border-radius: var(--border-radius);
 }
-.button:hover {
-  opacity: 0.5;
-  background-color: yellow;
-}
+
 .form {
   display: flex;
   justify-content: space-between;
@@ -372,3 +383,61 @@ body {
 :root {
   scroll-behavior: smooth;
 }
+
+/* ========= 2.5.24 Правила та од. вимірювання */
+.blog {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media all and (max-width <= 600px) {
+  .blog {
+    grid-template-columns: 1fr;
+
+  }
+@media all and (600px < width <= 800px) {
+  .blog {
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+}
+
+}
+@media all and (not (min-width: 800px)) {
+  .page_content {
+    background: red;
+  }
+}
+.form {
+  gap: var(--size-l);
+}
+@media all and (width <= 560px) {
+  .form {
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+
+  }
+  .form_info {
+    max-width: 300px;
+    width: 100%;
+    line-height: 150%;
+  }
+  .form_content {
+    align-items: center;
+    text-align: center;
+  }
+
+  }
+  .hero_container {
+    container-type: inline-size;
+    container-name: hero;
+
+  
+
+  }
+
+  @container hero (width < 960px) {
+    .hero {
+      flex-direction: column;
+    }
+  }
